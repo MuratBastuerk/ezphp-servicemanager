@@ -3,10 +3,6 @@
 
 namespace Mb7\EzPhp\ServiceManager\DI;
 
-
-use Mb7\EzPhp\ServiceManager\DI\Exception\EzServiceException;
-use Mb7\EzPhp\ServiceManager\DI\Exception\EzServiceNotFoundException;
-
 interface ServiceLocatorInterface extends ContainerInterface
 {
     /**
@@ -14,5 +10,5 @@ interface ServiceLocatorInterface extends ContainerInterface
      * @param callable $callable
      * @return mixed
      */
-    public function registerService(string $id, callable $callable );
+    public function registerService(string $id, callable $callable);
 }

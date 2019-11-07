@@ -11,9 +11,17 @@
     "require": {
         "php" : "^7.1"
     },
+    "require-dev": {
+        "phpunit/phpunit" : "^7"
+    },
     "autoload": {
         "psr-4": {
             "Mb7\\EzPhp\\ServiceManager\\" : "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mb7\\EZPhp\\ServiceManager\\Test\\" : "tests/"
         }
     },
     "extra": {
