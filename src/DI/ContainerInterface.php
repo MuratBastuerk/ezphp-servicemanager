@@ -13,6 +13,9 @@ interface ContainerInterface
      * @param string $id
      *
      * @return mixed
+     *
+     * @throws EzServiceNotFoundException
+     * @throws EzServiceException
      */
     public function get(string $id);
 
@@ -20,5 +23,5 @@ interface ContainerInterface
      * @param string $id
      * @return bool
      */
-    public function has(string $id) : bool;
+    public function has(string $id): bool;
 }
