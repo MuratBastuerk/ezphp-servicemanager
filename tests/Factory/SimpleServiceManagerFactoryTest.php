@@ -15,6 +15,7 @@ class SimpleServiceManagerFactoryTest extends TestCase
      */
     private SimpleServiceManagerFactory $cut;
 
+
     protected function setUp(): void
     {
         $this->cut = new SimpleServiceManagerFactory();
