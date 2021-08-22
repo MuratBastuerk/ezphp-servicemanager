@@ -13,8 +13,10 @@ use Mb7\EzPhp\ServiceManager\DI\SimpleServiceManager;
  */
 class SimpleServiceManagerFactory extends ServiceManagerFactory
 {
-    /** @var null */
-    private $serviceManager = null;
+    /**
+     * @var ServiceLocatorInterface|null
+     */
+    private ?ServiceLocatorInterface $serviceManager = null;
 
     /**
      *
@@ -24,8 +26,8 @@ class SimpleServiceManagerFactory extends ServiceManagerFactory
      */
     public function getServiceManager(): ServiceLocatorInterface
     {
-        if ($this->serviceManager == null){
-            $this->serviceManager =  new SimpleServiceManager();
+        if ($this->serviceManager == null) {
+            $this->serviceManager = new SimpleServiceManager();
         }
         return $this->serviceManager;
     }

@@ -13,18 +13,20 @@ class SimpleServiceManagerFactoryTest extends TestCase
     /**
      * @var SimpleServiceManagerFactory
      */
-    private $cut;
+    private SimpleServiceManagerFactory $cut;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->cut = new SimpleServiceManagerFactory();
     }
 
-    public function testReturnsSimpleServiceManager(){
+    public function testReturnsSimpleServiceManager(): void
+    {
         $this->assertInstanceOf(ServiceLocatorInterface::class, $this->cut->getServiceManager());
     }
 
-    public function testReturnsEveryTimeSameServiceManagerInstance(){
+    public function testReturnsEveryTimeSameServiceManagerInstance(): void
+    {
         $sm = $this->cut->getServiceManager();
         $sm2 = $this->cut->getServiceManager();
 

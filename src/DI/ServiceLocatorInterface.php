@@ -8,7 +8,7 @@ interface ServiceLocatorInterface extends ContainerInterface
     /**
      * @param string $id
      * @param callable $callable
-     * @return mixed
+     * @return $this
      */
-    public function registerService(string $id, callable $callable);
+    public function registerService(string $id, callable $callable): self;
 }

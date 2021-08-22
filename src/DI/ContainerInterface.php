@@ -11,11 +11,9 @@ interface ContainerInterface
 {
     /**
      * @param string $id
-     *
      * @return mixed
-     *
-     * @throws EzServiceNotFoundException
      * @throws EzServiceException
+     * @throws EzServiceNotFoundException
      */
     public function get(string $id);
 

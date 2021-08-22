@@ -16,7 +16,13 @@ use Mb7\EzPhp\ServiceManager\DI\Exception\EzServiceNotFoundException;
  */
 class SimpleServiceManager implements ServiceLocatorInterface
 {
-    private $collection = [];
+    /**
+     *
+     * An array holding all registered services
+     *
+     * @var array
+     */
+    private array $collection = [];
 
     /**
      * @inheritDoc
@@ -46,7 +52,7 @@ class SimpleServiceManager implements ServiceLocatorInterface
     /**
      * @inheritDoc
      */
-    public function registerService(string $id, callable $callable)
+    public function registerService(string $id, callable $callable): self
     {
         $this->collection[$id] = $callable;
         return $this;
